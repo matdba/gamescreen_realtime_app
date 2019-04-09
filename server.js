@@ -18,9 +18,9 @@ io.on('connection', (socket) => {
     socket.emit('newUserJoined', "this is from the server");
   });
 
-  // socket.on('moveAction', () => {
-  //
-  // });
+  socket.on('moveAction', (move) => {
+    socket.emit('getUserMove', move);
+  });
 
 });
 
