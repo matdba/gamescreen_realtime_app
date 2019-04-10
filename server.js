@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
 
   socket.on('moveAction', (move) => {
     io.emit('getUserMove', move);
-  });s
+  });
 
 });
 
