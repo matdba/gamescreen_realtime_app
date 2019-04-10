@@ -15,12 +15,12 @@ io.on('connection', (socket) => {
   console.log('user is connected');
 
   socket.on('join', () => {
-    socket.emit('newUserJoined', "this is from the server");
+    io.emit('newUserJoined', "this is from the server");
   });
 
   socket.on('moveAction', (move) => {
-    socket.emit('getUserMove', move);
-  });
+    io.emit('getUserMove', move);
+  });s
 
 });
 
